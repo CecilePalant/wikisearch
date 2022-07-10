@@ -1,0 +1,9 @@
+# Write a simple program that queries for 100 pages containing the terms `絵文字` in both English and Japanese pages
+# and out of the combined results, output the page title, page size and page language ranked by page size.
+# Only output the first 20 entries. Can be done in any programming language you want.
+
+### English wiki
+GET https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=絵文字&srlimit=100&format=json&srprop=size&utf8=
+
+### Japanese wiki
+GET https://ja.wikipedia.org/w/api.php?action=query&list=search&srsearch=絵文字&srlimit=100&format=json&srprop=title|size|snippet&utf8=
