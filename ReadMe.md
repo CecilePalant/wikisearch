@@ -9,17 +9,17 @@ of the combined results, output the page title, page size and page language rank
 
 How to run
 =========
+This project uses Kotlin (with Java 18) and maven. The only runtime dependency is Google Gson for
+serialization/deserialization.
+
 With IntelliJ: open project and run `fun main()` from `com/example/wikisearch/Main.kt`
 
-With Java in a terminal, where `wikisearch-1.0-SNAPSHOT-jar-with-dependencies.jar` is located,
-run ` java -jar wikisearch-1.0-SNAPSHOT-jar-with-dependencies.jar`
+Using maven, generate a 'fat-jar', in a terminal run `mvn clean install`
+go where `wikisearch-1.0-SNAPSHOT-jar-with-dependencies.jar` is located,
+using Java, run ` java -jar wikisearch-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
 About
 =========
-This project uses Kotlin (with Java 18) and maven. The only dependency is Google Gson for serialization/deserialization.
-
-`src/main/resources/com/example/wikisearch/wiki.http` can also be used in IDEA to run the 2 API requests, but it does
-not handle the 'business logic' of tagging the language, merging, sorting and outputting the response.
 
 Since this program is pretty straight forward, it is contained in one file only and does not have any unit tests.
 If it were part of a bigger project, it would have 1 or several classes for the models,
@@ -32,3 +32,7 @@ Error management is also missing from this program: if the connection is interru
 other than a 200, then the program would fail.
 
 
+Misc.
+=========
+`src/main/resources/com/example/wikisearch/wiki.http` can also be used in IDEA to run the 2 API requests, but it does
+not handle the 'business logic' of tagging the language, merging, sorting and outputting the response.
