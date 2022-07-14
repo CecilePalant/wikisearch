@@ -18,6 +18,8 @@ Using maven, generate a 'fat-jar', in a terminal run `mvn clean install`
 go where `wikisearch-1.0-SNAPSHOT-jar-with-dependencies.jar` is located,
 using Java, run ` java -jar wikisearch-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
+Using Docker, run `docker build -t wikisearch .` followed by `docker run wikisearch`
+
 About
 =========
 

@@ -63,8 +63,11 @@ fun main() {
         (englishSearchResponse.query.search + japaneseSearchResponse.query.search).sortedByDescending { it.size }
             .subList(0, 20)
 
-    // serialize to json string and print
-    println(gson.toJson(output))
+    // print
+    println()
+    var i = 1
+    output.forEach { println("$i ${it.title} - size(${it.size}) language(${it.language})").let { i++ } }
+    println()
 }
 
 // data classes define the models
